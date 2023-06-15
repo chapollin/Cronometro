@@ -71,10 +71,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Recuperar o tempo salvo anteriormente, se houver
-        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-        elapsedTime = sharedPreferences.getLong("elapsedTime", 0);
-        updateElapsedTime();
+
     }
 
     private void startTimer() {
@@ -107,11 +104,6 @@ public class MainActivity extends AppCompatActivity {
         btnReset.setVisibility(View.INVISIBLE);
         btnStartPause.setText("Iniciar");
 
-        // Limpar a lista de tempos salvos
-        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.clear();
-        editor.apply();
     }
 
     private void saveElapsedTime() {
