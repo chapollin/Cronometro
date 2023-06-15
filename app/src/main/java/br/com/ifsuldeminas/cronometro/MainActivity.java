@@ -131,7 +131,6 @@ public class MainActivity extends AppCompatActivity {
         String formattedTime = String.format("%02d:%02d:%03d", minutes, seconds, milliseconds);
         tvElapsedTime.setText(formattedTime);
     }
-
     public void onSavedTimesClicked(View view) {
         Intent intent = new Intent(this, SavedTimesActivity.class);
         startActivity(intent);
